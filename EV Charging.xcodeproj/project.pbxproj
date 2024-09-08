@@ -1,0 +1,633 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BF46B4322C8DAB6C005860B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46B4312C8DAB6C005860B2 /* AppDelegate.swift */; };
+		BF46B4342C8DAB6C005860B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46B4332C8DAB6C005860B2 /* SceneDelegate.swift */; };
+		BF46B4362C8DAB6C005860B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46B4352C8DAB6C005860B2 /* ViewController.swift */; };
+		BF46B4392C8DAB6C005860B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF46B4372C8DAB6C005860B2 /* Main.storyboard */; };
+		BF46B43C2C8DAB6C005860B2 /* EV_Charging.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF46B43A2C8DAB6C005860B2 /* EV_Charging.xcdatamodeld */; };
+		BF46B43E2C8DAB6E005860B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF46B43D2C8DAB6E005860B2 /* Assets.xcassets */; };
+		BF46B4412C8DAB6E005860B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF46B43F2C8DAB6E005860B2 /* LaunchScreen.storyboard */; };
+		BF46B44D2C8DAB6F005860B2 /* EV_ChargingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46B44C2C8DAB6F005860B2 /* EV_ChargingTests.swift */; };
+		BF46B4572C8DAB6F005860B2 /* EV_ChargingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46B4562C8DAB6F005860B2 /* EV_ChargingUITests.swift */; };
+		BF46B4592C8DAB6F005860B2 /* EV_ChargingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46B4582C8DAB6F005860B2 /* EV_ChargingUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BF46B4492C8DAB6F005860B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF46B4262C8DAB6C005860B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF46B42D2C8DAB6C005860B2;
+			remoteInfo = "EV Charging";
+		};
+		BF46B4532C8DAB6F005860B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF46B4262C8DAB6C005860B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF46B42D2C8DAB6C005860B2;
+			remoteInfo = "EV Charging";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BF46B42E2C8DAB6C005860B2 /* EV Charging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EV Charging.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF46B4312C8DAB6C005860B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BF46B4332C8DAB6C005860B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BF46B4352C8DAB6C005860B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BF46B4382C8DAB6C005860B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BF46B43B2C8DAB6C005860B2 /* EV_Charging.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EV_Charging.xcdatamodel; sourceTree = "<group>"; };
+		BF46B43D2C8DAB6E005860B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BF46B4402C8DAB6E005860B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BF46B4422C8DAB6E005860B2 /* EV_Charging.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EV_Charging.entitlements; sourceTree = "<group>"; };
+		BF46B4432C8DAB6E005860B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF46B4482C8DAB6F005860B2 /* EV ChargingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EV ChargingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF46B44C2C8DAB6F005860B2 /* EV_ChargingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EV_ChargingTests.swift; sourceTree = "<group>"; };
+		BF46B4522C8DAB6F005860B2 /* EV ChargingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EV ChargingUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF46B4562C8DAB6F005860B2 /* EV_ChargingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EV_ChargingUITests.swift; sourceTree = "<group>"; };
+		BF46B4582C8DAB6F005860B2 /* EV_ChargingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EV_ChargingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF46B42B2C8DAB6C005860B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF46B4452C8DAB6F005860B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF46B44F2C8DAB6F005860B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BF46B4252C8DAB6C005860B2 = {
+			isa = PBXGroup;
+			children = (
+				BF46B4302C8DAB6C005860B2 /* EV Charging */,
+				BF46B44B2C8DAB6F005860B2 /* EV ChargingTests */,
+				BF46B4552C8DAB6F005860B2 /* EV ChargingUITests */,
+				BF46B42F2C8DAB6C005860B2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BF46B42F2C8DAB6C005860B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF46B42E2C8DAB6C005860B2 /* EV Charging.app */,
+				BF46B4482C8DAB6F005860B2 /* EV ChargingTests.xctest */,
+				BF46B4522C8DAB6F005860B2 /* EV ChargingUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF46B4302C8DAB6C005860B2 /* EV Charging */ = {
+			isa = PBXGroup;
+			children = (
+				BF46B4312C8DAB6C005860B2 /* AppDelegate.swift */,
+				BF46B4332C8DAB6C005860B2 /* SceneDelegate.swift */,
+				BF46B4352C8DAB6C005860B2 /* ViewController.swift */,
+				BF46B4372C8DAB6C005860B2 /* Main.storyboard */,
+				BF46B43D2C8DAB6E005860B2 /* Assets.xcassets */,
+				BF46B43F2C8DAB6E005860B2 /* LaunchScreen.storyboard */,
+				BF46B4422C8DAB6E005860B2 /* EV_Charging.entitlements */,
+				BF46B4432C8DAB6E005860B2 /* Info.plist */,
+				BF46B43A2C8DAB6C005860B2 /* EV_Charging.xcdatamodeld */,
+			);
+			path = "EV Charging";
+			sourceTree = "<group>";
+		};
+		BF46B44B2C8DAB6F005860B2 /* EV ChargingTests */ = {
+			isa = PBXGroup;
+			children = (
+				BF46B44C2C8DAB6F005860B2 /* EV_ChargingTests.swift */,
+			);
+			path = "EV ChargingTests";
+			sourceTree = "<group>";
+		};
+		BF46B4552C8DAB6F005860B2 /* EV ChargingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BF46B4562C8DAB6F005860B2 /* EV_ChargingUITests.swift */,
+				BF46B4582C8DAB6F005860B2 /* EV_ChargingUITestsLaunchTests.swift */,
+			);
+			path = "EV ChargingUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF46B42D2C8DAB6C005860B2 /* EV Charging */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF46B45C2C8DAB6F005860B2 /* Build configuration list for PBXNativeTarget "EV Charging" */;
+			buildPhases = (
+				BF46B42A2C8DAB6C005860B2 /* Sources */,
+				BF46B42B2C8DAB6C005860B2 /* Frameworks */,
+				BF46B42C2C8DAB6C005860B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "EV Charging";
+			productName = "EV Charging";
+			productReference = BF46B42E2C8DAB6C005860B2 /* EV Charging.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BF46B4472C8DAB6F005860B2 /* EV ChargingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF46B45F2C8DAB6F005860B2 /* Build configuration list for PBXNativeTarget "EV ChargingTests" */;
+			buildPhases = (
+				BF46B4442C8DAB6F005860B2 /* Sources */,
+				BF46B4452C8DAB6F005860B2 /* Frameworks */,
+				BF46B4462C8DAB6F005860B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF46B44A2C8DAB6F005860B2 /* PBXTargetDependency */,
+			);
+			name = "EV ChargingTests";
+			productName = "EV ChargingTests";
+			productReference = BF46B4482C8DAB6F005860B2 /* EV ChargingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BF46B4512C8DAB6F005860B2 /* EV ChargingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF46B4622C8DAB6F005860B2 /* Build configuration list for PBXNativeTarget "EV ChargingUITests" */;
+			buildPhases = (
+				BF46B44E2C8DAB6F005860B2 /* Sources */,
+				BF46B44F2C8DAB6F005860B2 /* Frameworks */,
+				BF46B4502C8DAB6F005860B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF46B4542C8DAB6F005860B2 /* PBXTargetDependency */,
+			);
+			name = "EV ChargingUITests";
+			productName = "EV ChargingUITests";
+			productReference = BF46B4522C8DAB6F005860B2 /* EV ChargingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF46B4262C8DAB6C005860B2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					BF46B42D2C8DAB6C005860B2 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					BF46B4472C8DAB6F005860B2 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = BF46B42D2C8DAB6C005860B2;
+					};
+					BF46B4512C8DAB6F005860B2 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = BF46B42D2C8DAB6C005860B2;
+					};
+				};
+			};
+			buildConfigurationList = BF46B4292C8DAB6C005860B2 /* Build configuration list for PBXProject "EV Charging" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BF46B4252C8DAB6C005860B2;
+			productRefGroup = BF46B42F2C8DAB6C005860B2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF46B42D2C8DAB6C005860B2 /* EV Charging */,
+				BF46B4472C8DAB6F005860B2 /* EV ChargingTests */,
+				BF46B4512C8DAB6F005860B2 /* EV ChargingUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF46B42C2C8DAB6C005860B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF46B4412C8DAB6E005860B2 /* LaunchScreen.storyboard in Resources */,
+				BF46B43E2C8DAB6E005860B2 /* Assets.xcassets in Resources */,
+				BF46B4392C8DAB6C005860B2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF46B4462C8DAB6F005860B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF46B4502C8DAB6F005860B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF46B42A2C8DAB6C005860B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF46B4362C8DAB6C005860B2 /* ViewController.swift in Sources */,
+				BF46B43C2C8DAB6C005860B2 /* EV_Charging.xcdatamodeld in Sources */,
+				BF46B4322C8DAB6C005860B2 /* AppDelegate.swift in Sources */,
+				BF46B4342C8DAB6C005860B2 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF46B4442C8DAB6F005860B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF46B44D2C8DAB6F005860B2 /* EV_ChargingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF46B44E2C8DAB6F005860B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF46B4592C8DAB6F005860B2 /* EV_ChargingUITestsLaunchTests.swift in Sources */,
+				BF46B4572C8DAB6F005860B2 /* EV_ChargingUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BF46B44A2C8DAB6F005860B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF46B42D2C8DAB6C005860B2 /* EV Charging */;
+			targetProxy = BF46B4492C8DAB6F005860B2 /* PBXContainerItemProxy */;
+		};
+		BF46B4542C8DAB6F005860B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF46B42D2C8DAB6C005860B2 /* EV Charging */;
+			targetProxy = BF46B4532C8DAB6F005860B2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BF46B4372C8DAB6C005860B2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF46B4382C8DAB6C005860B2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BF46B43F2C8DAB6E005860B2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF46B4402C8DAB6E005860B2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BF46B45A2C8DAB6F005860B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BF46B45B2C8DAB6F005860B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF46B45D2C8DAB6F005860B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "EV Charging/EV_Charging.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5UGZJE492X;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "EV Charging/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.OlivierMiserez.EV-Charging";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BF46B45E2C8DAB6F005860B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "EV Charging/EV_Charging.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5UGZJE492X;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "EV Charging/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.OlivierMiserez.EV-Charging";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BF46B4602C8DAB6F005860B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5UGZJE492X;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.OlivierMiserez.EV-ChargingTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EV Charging.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EV Charging";
+			};
+			name = Debug;
+		};
+		BF46B4612C8DAB6F005860B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5UGZJE492X;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.OlivierMiserez.EV-ChargingTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EV Charging.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EV Charging";
+			};
+			name = Release;
+		};
+		BF46B4632C8DAB6F005860B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5UGZJE492X;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.OlivierMiserez.EV-ChargingUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "EV Charging";
+			};
+			name = Debug;
+		};
+		BF46B4642C8DAB6F005860B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5UGZJE492X;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.OlivierMiserez.EV-ChargingUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "EV Charging";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF46B4292C8DAB6C005860B2 /* Build configuration list for PBXProject "EV Charging" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF46B45A2C8DAB6F005860B2 /* Debug */,
+				BF46B45B2C8DAB6F005860B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF46B45C2C8DAB6F005860B2 /* Build configuration list for PBXNativeTarget "EV Charging" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF46B45D2C8DAB6F005860B2 /* Debug */,
+				BF46B45E2C8DAB6F005860B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF46B45F2C8DAB6F005860B2 /* Build configuration list for PBXNativeTarget "EV ChargingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF46B4602C8DAB6F005860B2 /* Debug */,
+				BF46B4612C8DAB6F005860B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF46B4622C8DAB6F005860B2 /* Build configuration list for PBXNativeTarget "EV ChargingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF46B4632C8DAB6F005860B2 /* Debug */,
+				BF46B4642C8DAB6F005860B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BF46B43A2C8DAB6C005860B2 /* EV_Charging.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BF46B43B2C8DAB6C005860B2 /* EV_Charging.xcdatamodel */,
+			);
+			currentVersion = BF46B43B2C8DAB6C005860B2 /* EV_Charging.xcdatamodel */;
+			path = EV_Charging.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BF46B4262C8DAB6C005860B2 /* Project object */;
+}
