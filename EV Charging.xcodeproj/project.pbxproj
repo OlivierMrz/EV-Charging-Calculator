@@ -17,6 +17,18 @@
 		BF46B4572C8DAB6F005860B2 /* EV_ChargingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46B4562C8DAB6F005860B2 /* EV_ChargingUITests.swift */; };
 		BF46B4592C8DAB6F005860B2 /* EV_ChargingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46B4582C8DAB6F005860B2 /* EV_ChargingUITestsLaunchTests.swift */; };
 		BF46B4672C8DB3A3005860B2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46B4662C8DB3A3005860B2 /* Colors.swift */; };
+		BF46B46A2C8DE155005860B2 /* ReuseIdentifying.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46B4692C8DE155005860B2 /* ReuseIdentifying.swift */; };
+		BF46B46E2C8DE1C8005860B2 /* CarInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46B46D2C8DE1C8005860B2 /* CarInfoCollectionViewCell.swift */; };
+		BF46B4702C8DF1C8005860B2 /* Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46B46F2C8DF1C8005860B2 /* Design.swift */; };
+		BF46B4722C8DFCE9005860B2 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46B4712C8DFCE9005860B2 /* CustomCollectionViewCell.swift */; };
+		BF46B4742C8E4960005860B2 /* ChargingPercentageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46B4732C8E4960005860B2 /* ChargingPercentageCollectionViewCell.swift */; };
+		BF46B47D2C8E4B8B005860B2 /* ThumblessSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46B4762C8E4B89005860B2 /* ThumblessSlider.swift */; };
+		BF46B47E2C8E4B8C005860B2 /* UIKitSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46B4772C8E4B8A005860B2 /* UIKitSlider.swift */; };
+		BF46B47F2C8E4B8C005860B2 /* ThumblessSlider+Scaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46B4782C8E4B8A005860B2 /* ThumblessSlider+Scaling.swift */; };
+		BF46B4802C8E4B8C005860B2 /* Slider+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46B4792C8E4B8A005860B2 /* Slider+ViewModel.swift */; };
+		BF46B4812C8E4B8C005860B2 /* Slider+Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46B47A2C8E4B8B005860B2 /* Slider+Options.swift */; };
+		BF46B4822C8E4B8C005860B2 /* Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46B47B2C8E4B8B005860B2 /* Slider.swift */; };
+		BF46B4832C8E4B8C005860B2 /* Slidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46B47C2C8E4B8B005860B2 /* Slidable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +64,18 @@
 		BF46B4562C8DAB6F005860B2 /* EV_ChargingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EV_ChargingUITests.swift; sourceTree = "<group>"; };
 		BF46B4582C8DAB6F005860B2 /* EV_ChargingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EV_ChargingUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BF46B4662C8DB3A3005860B2 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		BF46B4692C8DE155005860B2 /* ReuseIdentifying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifying.swift; sourceTree = "<group>"; };
+		BF46B46D2C8DE1C8005860B2 /* CarInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInfoCollectionViewCell.swift; sourceTree = "<group>"; };
+		BF46B46F2C8DF1C8005860B2 /* Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Design.swift; sourceTree = "<group>"; };
+		BF46B4712C8DFCE9005860B2 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		BF46B4732C8E4960005860B2 /* ChargingPercentageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingPercentageCollectionViewCell.swift; sourceTree = "<group>"; };
+		BF46B4762C8E4B89005860B2 /* ThumblessSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThumblessSlider.swift; sourceTree = "<group>"; };
+		BF46B4772C8E4B8A005860B2 /* UIKitSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitSlider.swift; sourceTree = "<group>"; };
+		BF46B4782C8E4B8A005860B2 /* ThumblessSlider+Scaling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ThumblessSlider+Scaling.swift"; sourceTree = "<group>"; };
+		BF46B4792C8E4B8A005860B2 /* Slider+ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Slider+ViewModel.swift"; sourceTree = "<group>"; };
+		BF46B47A2C8E4B8B005860B2 /* Slider+Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Slider+Options.swift"; sourceTree = "<group>"; };
+		BF46B47B2C8E4B8B005860B2 /* Slider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slider.swift; sourceTree = "<group>"; };
+		BF46B47C2C8E4B8B005860B2 /* Slidable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slidable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +126,8 @@
 		BF46B4302C8DAB6C005860B2 /* EV Charging */ = {
 			isa = PBXGroup;
 			children = (
+				BF46B46B2C8DE18B005860B2 /* Views */,
+				BF46B4682C8DE13F005860B2 /* Protocols */,
 				BF46B4652C8DB386005860B2 /* extensions */,
 				BF46B4312C8DAB6C005860B2 /* AppDelegate.swift */,
 				BF46B4332C8DAB6C005860B2 /* SceneDelegate.swift */,
@@ -136,8 +162,50 @@
 			isa = PBXGroup;
 			children = (
 				BF46B4662C8DB3A3005860B2 /* Colors.swift */,
+				BF46B46F2C8DF1C8005860B2 /* Design.swift */,
 			);
 			path = extensions;
+			sourceTree = "<group>";
+		};
+		BF46B4682C8DE13F005860B2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BF46B4692C8DE155005860B2 /* ReuseIdentifying.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		BF46B46B2C8DE18B005860B2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BF46B4752C8E4B64005860B2 /* UISlider */,
+				BF46B46C2C8DE197005860B2 /* CollectionViewCells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BF46B46C2C8DE197005860B2 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				BF46B46D2C8DE1C8005860B2 /* CarInfoCollectionViewCell.swift */,
+				BF46B4712C8DFCE9005860B2 /* CustomCollectionViewCell.swift */,
+				BF46B4732C8E4960005860B2 /* ChargingPercentageCollectionViewCell.swift */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		BF46B4752C8E4B64005860B2 /* UISlider */ = {
+			isa = PBXGroup;
+			children = (
+				BF46B47C2C8E4B8B005860B2 /* Slidable.swift */,
+				BF46B47B2C8E4B8B005860B2 /* Slider.swift */,
+				BF46B47A2C8E4B8B005860B2 /* Slider+Options.swift */,
+				BF46B4792C8E4B8A005860B2 /* Slider+ViewModel.swift */,
+				BF46B4762C8E4B89005860B2 /* ThumblessSlider.swift */,
+				BF46B4782C8E4B8A005860B2 /* ThumblessSlider+Scaling.swift */,
+				BF46B4772C8E4B8A005860B2 /* UIKitSlider.swift */,
+			);
+			path = UISlider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,8 +339,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF46B4362C8DAB6C005860B2 /* ViewController.swift in Sources */,
+				BF46B4742C8E4960005860B2 /* ChargingPercentageCollectionViewCell.swift in Sources */,
+				BF46B47D2C8E4B8B005860B2 /* ThumblessSlider.swift in Sources */,
+				BF46B4722C8DFCE9005860B2 /* CustomCollectionViewCell.swift in Sources */,
+				BF46B4702C8DF1C8005860B2 /* Design.swift in Sources */,
+				BF46B47E2C8E4B8C005860B2 /* UIKitSlider.swift in Sources */,
+				BF46B4832C8E4B8C005860B2 /* Slidable.swift in Sources */,
+				BF46B4812C8E4B8C005860B2 /* Slider+Options.swift in Sources */,
+				BF46B46A2C8DE155005860B2 /* ReuseIdentifying.swift in Sources */,
+				BF46B46E2C8DE1C8005860B2 /* CarInfoCollectionViewCell.swift in Sources */,
+				BF46B47F2C8E4B8C005860B2 /* ThumblessSlider+Scaling.swift in Sources */,
+				BF46B4822C8E4B8C005860B2 /* Slider.swift in Sources */,
 				BF46B4672C8DB3A3005860B2 /* Colors.swift in Sources */,
 				BF46B43C2C8DAB6C005860B2 /* EV_Charging.xcdatamodeld in Sources */,
+				BF46B4802C8E4B8C005860B2 /* Slider+ViewModel.swift in Sources */,
 				BF46B4322C8DAB6C005860B2 /* AppDelegate.swift in Sources */,
 				BF46B4342C8DAB6C005860B2 /* SceneDelegate.swift in Sources */,
 			);
