@@ -10,13 +10,13 @@
 		BF46B4322C8DAB6C005860B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46B4312C8DAB6C005860B2 /* AppDelegate.swift */; };
 		BF46B4342C8DAB6C005860B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46B4332C8DAB6C005860B2 /* SceneDelegate.swift */; };
 		BF46B4362C8DAB6C005860B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46B4352C8DAB6C005860B2 /* ViewController.swift */; };
-		BF46B4392C8DAB6C005860B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF46B4372C8DAB6C005860B2 /* Main.storyboard */; };
 		BF46B43C2C8DAB6C005860B2 /* EV_Charging.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF46B43A2C8DAB6C005860B2 /* EV_Charging.xcdatamodeld */; };
 		BF46B43E2C8DAB6E005860B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF46B43D2C8DAB6E005860B2 /* Assets.xcassets */; };
 		BF46B4412C8DAB6E005860B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF46B43F2C8DAB6E005860B2 /* LaunchScreen.storyboard */; };
 		BF46B44D2C8DAB6F005860B2 /* EV_ChargingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46B44C2C8DAB6F005860B2 /* EV_ChargingTests.swift */; };
 		BF46B4572C8DAB6F005860B2 /* EV_ChargingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46B4562C8DAB6F005860B2 /* EV_ChargingUITests.swift */; };
 		BF46B4592C8DAB6F005860B2 /* EV_ChargingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46B4582C8DAB6F005860B2 /* EV_ChargingUITestsLaunchTests.swift */; };
+		BF46B4672C8DB3A3005860B2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46B4662C8DB3A3005860B2 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,6 @@
 		BF46B4312C8DAB6C005860B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF46B4332C8DAB6C005860B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BF46B4352C8DAB6C005860B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BF46B4382C8DAB6C005860B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF46B43B2C8DAB6C005860B2 /* EV_Charging.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EV_Charging.xcdatamodel; sourceTree = "<group>"; };
 		BF46B43D2C8DAB6E005860B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF46B4402C8DAB6E005860B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,6 +51,7 @@
 		BF46B4522C8DAB6F005860B2 /* EV ChargingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EV ChargingUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF46B4562C8DAB6F005860B2 /* EV_ChargingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EV_ChargingUITests.swift; sourceTree = "<group>"; };
 		BF46B4582C8DAB6F005860B2 /* EV_ChargingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EV_ChargingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BF46B4662C8DB3A3005860B2 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +102,10 @@
 		BF46B4302C8DAB6C005860B2 /* EV Charging */ = {
 			isa = PBXGroup;
 			children = (
+				BF46B4652C8DB386005860B2 /* extensions */,
 				BF46B4312C8DAB6C005860B2 /* AppDelegate.swift */,
 				BF46B4332C8DAB6C005860B2 /* SceneDelegate.swift */,
 				BF46B4352C8DAB6C005860B2 /* ViewController.swift */,
-				BF46B4372C8DAB6C005860B2 /* Main.storyboard */,
 				BF46B43D2C8DAB6E005860B2 /* Assets.xcassets */,
 				BF46B43F2C8DAB6E005860B2 /* LaunchScreen.storyboard */,
 				BF46B4422C8DAB6E005860B2 /* EV_Charging.entitlements */,
@@ -130,6 +130,14 @@
 				BF46B4582C8DAB6F005860B2 /* EV_ChargingUITestsLaunchTests.swift */,
 			);
 			path = "EV ChargingUITests";
+			sourceTree = "<group>";
+		};
+		BF46B4652C8DB386005860B2 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BF46B4662C8DB3A3005860B2 /* Colors.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,7 +246,6 @@
 			files = (
 				BF46B4412C8DAB6E005860B2 /* LaunchScreen.storyboard in Resources */,
 				BF46B43E2C8DAB6E005860B2 /* Assets.xcassets in Resources */,
-				BF46B4392C8DAB6C005860B2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF46B4362C8DAB6C005860B2 /* ViewController.swift in Sources */,
+				BF46B4672C8DB3A3005860B2 /* Colors.swift in Sources */,
 				BF46B43C2C8DAB6C005860B2 /* EV_Charging.xcdatamodeld in Sources */,
 				BF46B4322C8DAB6C005860B2 /* AppDelegate.swift in Sources */,
 				BF46B4342C8DAB6C005860B2 /* SceneDelegate.swift in Sources */,
@@ -303,14 +311,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BF46B4372C8DAB6C005860B2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BF46B4382C8DAB6C005860B2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BF46B43F2C8DAB6E005860B2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -454,9 +454,8 @@
 				INFOPLIST_FILE = "EV Charging/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -483,9 +482,8 @@
 				INFOPLIST_FILE = "EV Charging/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
