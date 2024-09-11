@@ -188,7 +188,7 @@ class ChargingPercentageCollectionViewCell: OMCustomCollectionView {
     
     func configure(viewModel: CollectionViewViewModel?) {
         guard let viewModel = viewModel else { return }
-        
+        self.viewModel = viewModel
         // configure all propties
     }
     

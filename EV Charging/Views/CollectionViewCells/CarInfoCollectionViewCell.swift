@@ -13,7 +13,6 @@ class CarInfoCollectionViewCell: OMCustomCollectionView {
     private lazy var carTitleLabel: UILabel = {
         let label: UILabel = .init()
         label.textColor = Colors.black
-//        label.text = "Tesla Model Y"
         label.text = label.text?.capitalized
         label.font = UIFont.systemFont(ofSize: 32, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -31,7 +30,6 @@ class CarInfoCollectionViewCell: OMCustomCollectionView {
     private lazy var engineLabel: UILabel = {
         let label: UILabel = .init()
         label.textColor = Colors.black
-//        label.text = "Long Range Dual Motor"
         label.font = UIFont.systemFont(ofSize: 12, weight: .regular)
         label.numberOfLines = 0
         label.text = label.text?.capitalized
