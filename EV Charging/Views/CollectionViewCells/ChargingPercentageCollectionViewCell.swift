@@ -25,7 +25,8 @@ enum SliderTypeString: String {
 }
 
 class ChargingPercentageCollectionViewCell: CustomCollectionViewCell {
-    
+    var viewModel: CollectionViewViewModel?
+
     private lazy var currentSoCView: UIView = {
         let view: UIView = .init()
         view.backgroundColor = Colors.white
@@ -91,7 +92,7 @@ class ChargingPercentageCollectionViewCell: CustomCollectionViewCell {
     private lazy var targetPercentageLabel: UILabel = {
         let label: UILabel = .init()
         label.textColor = Colors.black
-        label.text = "20 %"
+        label.text = "80 %"
         label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -103,6 +104,7 @@ class ChargingPercentageCollectionViewCell: CustomCollectionViewCell {
             scaling: .none,
             cornerRadius: .fixed(21)
         ))
+        slider.viewModel.value = 80
         slider.sliderDataSource = self
         slider.tintColor = Colors.green
         slider.viewModel.sliderName = SliderTypeString.target.rawValue
@@ -180,6 +182,19 @@ class ChargingPercentageCollectionViewCell: CustomCollectionViewCell {
             targetSoCSlider.centerXAnchor.constraint(equalTo: targetSoCView.centerXAnchor),
             targetSoCSlider.bottomAnchor.constraint(equalTo: targetSoCView.bottomAnchor, constant: -padding.large)
         ])
+        
+        updateData()
+    }
+    
+    func updateData() {
+        guard let viewModel = viewModel else { return }
+
+        currentSoCSlider.viewModel.value = viewModel.currentSoCValue
+        currentPercentageLabel.text = "\(String(format: "%.0f", viewModel.currentSoCValue)) %"
+        targetSoCSlider.viewModel.value = viewModel.targetSoCValue
+        targetPercentageLabel.text = "\(String(format: "%.0f", viewModel.targetSoCValue)) %"
+        
+        viewModel.calculateChargingCost()
     }
     
     required init?(coder: NSCoder) {
@@ -189,20 +204,27 @@ class ChargingPercentageCollectionViewCell: CustomCollectionViewCell {
 
 extension ChargingPercentageCollectionViewCell: ReuseIdentifying {}
 
-extension ChargingPercentageCollectionViewCell: SliderDataSource {
+extension ChargingPercentageCollectionViewCell: SliderDelegate {
     func valueDidChange(newValue: Double, for cell: String) {
         guard let cellType = SliderTypeString(rawValue: cell) else { return }
         
         switch cellType {
         case .current:
-            currentPercentageLabel.text = "\(String(format: "%.0f", newValue)) %"
+            if newValue > Double(viewModel!.targetSoCValue) {
+                return
+            }
+            self.viewModel?.setCurrentSoC(value: newValue)
+            updateData()
         case .target:
-            targetPercentageLabel.text = "\(String(format: "%.0f", newValue)) %"
+            if newValue < Double(viewModel!.currentSoCValue) {
+                return
+            }
+            self.viewModel?.setTargetSoC(value: newValue)
+            updateData()
         }
     }
-    
+
     func movementTracking(changed: SliderMovementTrackingChanged) {        
         sliderMovementDelegate?.isSliderMoving(bool: changed == .began ? false : true)
     }
 }
-

@@ -12,7 +12,7 @@ extension Slider {
     public struct ViewModel {
         public var maximumValue: Double = 100
         public var minimumValue: Double = 0
-        public var value: Double = 20
+        public var value: Double = 0
         public var interacting: Bool = false
         public var sliderName: String = ""
     }

@@ -22,9 +22,13 @@ class ViewController: UIViewController {
         cv.backgroundColor = .clear
         cv.register(CarInfoCollectionViewCell.self, forCellWithReuseIdentifier: CarInfoCollectionViewCell.reuseIdentifier)
         cv.register(ChargingPercentageCollectionViewCell.self, forCellWithReuseIdentifier: ChargingPercentageCollectionViewCell.reuseIdentifier)
+        cv.register(ChargingPowerAndCostCollectionViewCell.self, forCellWithReuseIdentifier: ChargingPowerAndCostCollectionViewCell.reuseIdentifier)
+        cv.register(CostAndTimerCollectionViewCell.self, forCellWithReuseIdentifier: CostAndTimerCollectionViewCell.reuseIdentifier)
         cv.translatesAutoresizingMaskIntoConstraints = false
         return cv
     }()
+    
+    private var collectionViewViewModel: CollectionViewViewModel?
     
     override func loadView() {
         super.loadView()
@@ -36,6 +40,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
+        self.collectionViewViewModel = CollectionViewViewModel()
     }
 
 
@@ -55,7 +60,7 @@ class ViewController: UIViewController {
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        5
+        4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -63,32 +68,88 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         case 0:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CarInfoCollectionViewCell.reuseIdentifier, 
                                                                 for: indexPath) as? CarInfoCollectionViewCell else { return UICollectionViewCell() }
+            cell.viewModel = collectionViewViewModel
+            cell.updateData()
             return cell
         case 1:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ChargingPercentageCollectionViewCell.reuseIdentifier,
                                                                 for: indexPath) as? ChargingPercentageCollectionViewCell else { return UICollectionViewCell() }
             cell.sliderMovementDelegate = self
+            cell.viewModel = collectionViewViewModel
+            cell.updateData()
             return cell
         case 2:
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CarInfoCollectionViewCell.reuseIdentifier, 
-                                                                for: indexPath) as? CarInfoCollectionViewCell else { return UICollectionViewCell() }
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ChargingPowerAndCostCollectionViewCell.reuseIdentifier,
+                                                                for: indexPath) as? ChargingPowerAndCostCollectionViewCell else { return UICollectionViewCell() }
+            cell.delegate = self
+            cell.viewModel = collectionViewViewModel
+            cell.updateData()
             return cell
         case 3:
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CarInfoCollectionViewCell.reuseIdentifier, 
-                                                                for: indexPath) as? CarInfoCollectionViewCell else { return UICollectionViewCell() }
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CostAndTimerCollectionViewCell.reuseIdentifier,
+                                                                for: indexPath) as? CostAndTimerCollectionViewCell else { return UICollectionViewCell() }
+            cell.viewModel = collectionViewViewModel
+            cell.updateData()
             return cell
         default:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CarInfoCollectionViewCell.reuseIdentifier, 
                                                                 for: indexPath) as? CarInfoCollectionViewCell else { return UICollectionViewCell() }
             return cell
         }
-
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            let vc = UIViewController()
+            vc.view.backgroundColor = .white
+            vc.modalPresentationStyle = .formSheet
+            self.present(vc, animated: true, completion: nil)
+        }
     }
 }
 
 extension ViewController: sliderMovementDelegate {
     func isSliderMoving(bool: Bool) {
         collectionView.isScrollEnabled = bool
+        collectionView.reloadData()
+    }
+}
+
+extension ViewController: ChargingPowerAndCostCellDelegate {
+    func additionalViewTapped(isNoFeeSelected: Bool) {
+        if isNoFeeSelected {
+            collectionView.reloadData()
+        } else {
+            promptForAnswer()
+        }
+    }
+    
+    func ChargingKWOrChargingCostSliderMoved() {
+        collectionView.reloadData()
+    }
+
+    private func promptForAnswer() {
+        let ac = UIAlertController(title: "Edit Additional Cost", message: nil, preferredStyle: .alert)
+        ac.addTextField { textfield in
+            textfield.text = String(format: "%.2f", self.collectionViewViewModel?.additionalCost ?? 0.0)
+            textfield.keyboardType = .decimalPad
+        }
+
+        let submitAction = UIAlertAction(title: "Save", style: .default) { [unowned ac] _ in
+            guard let textField = ac.textFields?.first,
+                  let text = textField.text,
+                    let newValue = Float(text) else { return }
+
+            self.collectionViewViewModel?.setAdditionalCost(value: newValue)
+            self.collectionView.reloadData()
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { [unowned ac] _ in }
+
+        ac.addAction(submitAction)
+        ac.addAction(cancelAction)
+
+        self.present(ac, animated: true)
     }
 }
 

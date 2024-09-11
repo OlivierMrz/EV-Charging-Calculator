@@ -44,7 +44,7 @@ open class ThumblessSlider: UIView, Slidable {
     public var cornerRadius: CornerRadius
     open var visualEffect: UIVisualEffect? {
         didSet {
-            visualEffectView.backgroundColor = Colors.white
+            visualEffectView.backgroundColor = Colors.background
         }
     }
     
@@ -268,6 +268,7 @@ private extension ThumblessSlider {
         
         let visualEffectView = UIView()
         self.visualEffectView = visualEffectView
+        visualEffectView.backgroundColor = Colors.background
         visualEffectView.layer.cornerCurve = .continuous
         visualEffectView.clipsToBounds = true
         visualEffectView.translatesAutoresizingMaskIntoConstraints = false
@@ -341,7 +342,7 @@ private extension ThumblessSlider {
         
         for _ in 0..<11 {
             let lineView = UIView()
-            lineView.backgroundColor = Colors.white
+            lineView.backgroundColor = Colors.background
             sv.addArrangedSubview(lineView)
         }
         

@@ -12,7 +12,7 @@ enum SliderMovementTrackingChanged: String {
     case began, ended
 }
 
-protocol SliderDataSource {
+protocol SliderDelegate {
     func valueDidChange(newValue: Double, for cell: String)
     func movementTracking(changed: SliderMovementTrackingChanged)
 }
@@ -21,7 +21,7 @@ open class Slider: UIView {
     open internal(set) var slider: Slidable
     open internal(set) var options: Options
     
-    var sliderDataSource: SliderDataSource?
+    var sliderDataSource: SliderDelegate?
     
     open override func tintColorDidChange() {
         super.tintColorDidChange()

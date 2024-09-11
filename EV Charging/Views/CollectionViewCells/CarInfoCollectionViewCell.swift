@@ -8,6 +8,7 @@
 import UIKit
 
 class CarInfoCollectionViewCell: CustomCollectionViewCell {
+    var viewModel: CollectionViewViewModel?
     
     private lazy var carTitleLabel: UILabel = {
         let label: UILabel = .init()
@@ -51,7 +52,7 @@ class CarInfoCollectionViewCell: CustomCollectionViewCell {
     private lazy var batterySizePrimaryLabel: UILabel = {
         let label: UILabel = .init()
         label.textColor = Colors.black
-        label.text = "75"
+        label.text = ""
         label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -117,6 +118,12 @@ class CarInfoCollectionViewCell: CustomCollectionViewCell {
             carImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             carImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding.large)
         ])
+    }
+    
+    func updateData() {
+        guard let viewModel = viewModel else { return }
+
+        batterySizePrimaryLabel.text = "\(viewModel.carBatteryCapacity)"
     }
     
     func setSublabelWith(text: String) {
