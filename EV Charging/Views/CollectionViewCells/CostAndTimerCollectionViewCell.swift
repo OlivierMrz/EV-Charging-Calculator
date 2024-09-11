@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CostAndTimerCollectionViewCell: CustomCollectionViewCell {
+class CostAndTimerCollectionViewCell: OMCustomCollectionView {
     var viewModel: CollectionViewViewModel?
     
     private lazy var estimateChargingCostLabel: UILabel = {
@@ -53,7 +53,7 @@ class CostAndTimerCollectionViewCell: CustomCollectionViewCell {
         setupViews()
     }
     
-    private func setupViews() {
+    internal func setupViews() {
         contentView.backgroundColor = .clear
         contentView.layer.cornerRadius = .zero
         
@@ -84,6 +84,12 @@ class CostAndTimerCollectionViewCell: CustomCollectionViewCell {
             
             estimateChargingTimeLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0)
         ])
+    }
+    
+    func configure(viewModel: CollectionViewViewModel?) {
+        guard let viewModel = viewModel else { return }
+        
+        // set all properties
     }
     
     func updateData() {

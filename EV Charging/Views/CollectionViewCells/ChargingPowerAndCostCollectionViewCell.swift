@@ -12,7 +12,7 @@ protocol ChargingPowerAndCostCellDelegate {
     func ChargingKWOrChargingCostSliderMoved()
 }
 
-class ChargingPowerAndCostCollectionViewCell: CustomCollectionViewCell {
+class ChargingPowerAndCostCollectionViewCell: OMCustomCollectionView {
     var delegate: ChargingPowerAndCostCellDelegate?
     var viewModel: CollectionViewViewModel?
     
@@ -209,7 +209,7 @@ class ChargingPowerAndCostCollectionViewCell: CustomCollectionViewCell {
         setupViews()
     }
     
-    private func setupViews() {
+    internal func setupViews() {
         contentView.backgroundColor = .clear
         
         // Current Slider View
@@ -320,6 +320,12 @@ class ChargingPowerAndCostCollectionViewCell: CustomCollectionViewCell {
             additionalCostView.trailingAnchor.constraint(equalTo: powerCostView.trailingAnchor),
             additionalCostView.heightAnchor.constraint(equalToConstant: 80)
         ])
+    }
+    
+    func configure(viewModel: CollectionViewViewModel?) {
+        guard let viewModel = viewModel else { return }
+        
+        // configure properties
     }
     
     func updateData() {

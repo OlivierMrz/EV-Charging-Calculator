@@ -38,9 +38,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupUI()
+
         self.collectionViewViewModel = CollectionViewViewModel()
+        setupUI()
     }
 
 
@@ -68,27 +68,27 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         case 0:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CarInfoCollectionViewCell.reuseIdentifier, 
                                                                 for: indexPath) as? CarInfoCollectionViewCell else { return UICollectionViewCell() }
-            cell.viewModel = collectionViewViewModel
+            cell.configure(viewModel: collectionViewViewModel)
             cell.updateData()
             return cell
         case 1:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ChargingPercentageCollectionViewCell.reuseIdentifier,
                                                                 for: indexPath) as? ChargingPercentageCollectionViewCell else { return UICollectionViewCell() }
             cell.sliderMovementDelegate = self
-            cell.viewModel = collectionViewViewModel
+            cell.configure(viewModel: collectionViewViewModel)
             cell.updateData()
             return cell
         case 2:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ChargingPowerAndCostCollectionViewCell.reuseIdentifier,
                                                                 for: indexPath) as? ChargingPowerAndCostCollectionViewCell else { return UICollectionViewCell() }
             cell.delegate = self
-            cell.viewModel = collectionViewViewModel
+            cell.configure(viewModel: collectionViewViewModel)
             cell.updateData()
             return cell
         case 3:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CostAndTimerCollectionViewCell.reuseIdentifier,
                                                                 for: indexPath) as? CostAndTimerCollectionViewCell else { return UICollectionViewCell() }
-            cell.viewModel = collectionViewViewModel
+            cell.configure(viewModel: collectionViewViewModel)
             cell.updateData()
             return cell
         default:
@@ -99,6 +99,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // to be implemanted
         if indexPath.row == 0 {
             let vc = UIViewController()
             vc.view.backgroundColor = .white
@@ -144,7 +145,7 @@ extension ViewController: ChargingPowerAndCostCellDelegate {
             self.collectionView.reloadData()
         }
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { [unowned ac] _ in }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in }
 
         ac.addAction(submitAction)
         ac.addAction(cancelAction)

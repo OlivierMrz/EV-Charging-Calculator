@@ -7,17 +7,24 @@
 
 import UIKit
 
+protocol CustomCollectionViewProtocol {
+    func setupViews()
+    func updateData()
+    func configure(viewModel: CollectionViewViewModel?)
+}
+
+typealias OMCustomCollectionView = CustomCollectionViewCell & CustomCollectionViewProtocol
+
 class CustomCollectionViewCell: UICollectionViewCell {
-    
     typealias padding = Design.Padding
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        setupView()
+        setupViews()
     }
     
-    private func setupView() {
+    private func setupViews() {
         contentView.translatesAutoresizingMaskIntoConstraints = false
         contentView.backgroundColor = Colors.white
         contentView.layer.cornerRadius = Design.cornerRadius.default

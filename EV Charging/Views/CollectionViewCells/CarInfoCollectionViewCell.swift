@@ -7,13 +7,13 @@
 
 import UIKit
 
-class CarInfoCollectionViewCell: CustomCollectionViewCell {
+class CarInfoCollectionViewCell: OMCustomCollectionView {
     var viewModel: CollectionViewViewModel?
     
     private lazy var carTitleLabel: UILabel = {
         let label: UILabel = .init()
         label.textColor = Colors.black
-        label.text = "Tesla Model Y"
+//        label.text = "Tesla Model Y"
         label.text = label.text?.capitalized
         label.font = UIFont.systemFont(ofSize: 32, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -28,10 +28,10 @@ class CarInfoCollectionViewCell: CustomCollectionViewCell {
         return imageView
     }()
     
-    private lazy var motorLabel: UILabel = {
+    private lazy var engineLabel: UILabel = {
         let label: UILabel = .init()
         label.textColor = Colors.black
-        label.text = "Long Range Dual Motor"
+//        label.text = "Long Range Dual Motor"
         label.font = UIFont.systemFont(ofSize: 12, weight: .regular)
         label.numberOfLines = 0
         label.text = label.text?.capitalized
@@ -75,7 +75,7 @@ class CarInfoCollectionViewCell: CustomCollectionViewCell {
         setupViews()
     }
     
-    private func setupViews() {
+    internal func setupViews() {
         contentView.layer.borderWidth = 1.0
         contentView.layer.borderColor = Colors.blue.cgColor
         
@@ -86,28 +86,28 @@ class CarInfoCollectionViewCell: CustomCollectionViewCell {
             carTitleLabel.heightAnchor.constraint(equalToConstant: 25)
         ])
         
-        contentView.addSubview(motorLabel)
+        contentView.addSubview(engineLabel)
         NSLayoutConstraint.activate([
-            motorLabel.topAnchor.constraint(equalTo: carTitleLabel.bottomAnchor, constant: padding.large),
-            motorLabel.leadingAnchor.constraint(equalTo: carTitleLabel.leadingAnchor),
-            motorLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -padding.large)
+            engineLabel.topAnchor.constraint(equalTo: carTitleLabel.bottomAnchor, constant: padding.large),
+            engineLabel.leadingAnchor.constraint(equalTo: carTitleLabel.leadingAnchor),
+            engineLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -padding.large)
         ])
         
         contentView.addSubview(seperatorLabel)
         NSLayoutConstraint.activate([
-            seperatorLabel.centerYAnchor.constraint(equalTo: motorLabel.centerYAnchor),
-            seperatorLabel.leadingAnchor.constraint(equalTo: motorLabel.trailingAnchor, constant: 5)
+            seperatorLabel.centerYAnchor.constraint(equalTo: engineLabel.centerYAnchor),
+            seperatorLabel.leadingAnchor.constraint(equalTo: engineLabel.trailingAnchor, constant: 5)
         ])
         
         contentView.addSubview(batterySizePrimaryLabel)
         NSLayoutConstraint.activate([
-            batterySizePrimaryLabel.bottomAnchor.constraint(equalTo: motorLabel.bottomAnchor),
+            batterySizePrimaryLabel.bottomAnchor.constraint(equalTo: engineLabel.bottomAnchor),
             batterySizePrimaryLabel.leadingAnchor.constraint(equalTo: seperatorLabel.trailingAnchor, constant: 5)
         ])
         
         contentView.addSubview(batterySizeSecondaryLabel)
         NSLayoutConstraint.activate([
-            batterySizeSecondaryLabel.topAnchor.constraint(equalTo: motorLabel.topAnchor),
+            batterySizeSecondaryLabel.topAnchor.constraint(equalTo: engineLabel.topAnchor),
             batterySizeSecondaryLabel.leadingAnchor.constraint(equalTo: batterySizePrimaryLabel.trailingAnchor, constant: 5)
         ])
         
@@ -120,6 +120,7 @@ class CarInfoCollectionViewCell: CustomCollectionViewCell {
         ])
     }
     
+    
     func updateData() {
         guard let viewModel = viewModel else { return }
 
@@ -127,7 +128,15 @@ class CarInfoCollectionViewCell: CustomCollectionViewCell {
     }
     
     func setSublabelWith(text: String) {
-        motorLabel.text = text
+        engineLabel.text = text
+    }
+    
+    func configure(viewModel: CollectionViewViewModel?) {
+        guard let viewModel = viewModel else { return }
+
+        self.viewModel = viewModel
+        carTitleLabel.text = viewModel.carName
+        engineLabel.text = viewModel.carEngine
     }
     
     required init?(coder: NSCoder) {

@@ -22,6 +22,13 @@ class CollectionViewViewModel {
         
     }
     
+    var carName: String {
+        "Tesla Model Y"
+    }
+    var carEngine: String {
+        "Long Range Dual Motor"
+    }
+    
     func setCarBatteryCapacity(value: Int) {
         carBatteryCapacity = value
     }

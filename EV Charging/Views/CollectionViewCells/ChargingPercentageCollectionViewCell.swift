@@ -24,7 +24,7 @@ enum SliderTypeString: String {
     }
 }
 
-class ChargingPercentageCollectionViewCell: CustomCollectionViewCell {
+class ChargingPercentageCollectionViewCell: OMCustomCollectionView {
     var viewModel: CollectionViewViewModel?
 
     private lazy var currentSoCView: UIView = {
@@ -120,7 +120,7 @@ class ChargingPercentageCollectionViewCell: CustomCollectionViewCell {
         setupViews()
     }
     
-    private func setupViews() {
+    internal func setupViews() {
         contentView.backgroundColor = .clear
         
         // Current Slider View
@@ -184,6 +184,12 @@ class ChargingPercentageCollectionViewCell: CustomCollectionViewCell {
         ])
         
         updateData()
+    }
+    
+    func configure(viewModel: CollectionViewViewModel?) {
+        guard let viewModel = viewModel else { return }
+        
+        // configure all propties
     }
     
     func updateData() {
