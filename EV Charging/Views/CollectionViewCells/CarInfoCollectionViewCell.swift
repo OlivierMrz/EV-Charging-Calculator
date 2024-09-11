@@ -13,7 +13,7 @@ class CarInfoCollectionViewCell: CustomCollectionViewCell {
     private lazy var carTitleLabel: UILabel = {
         let label: UILabel = .init()
         label.textColor = Colors.black
-        label.text = "car title label"
+        label.text = "Tesla Model Y"
         label.text = label.text?.capitalized
         label.font = UIFont.systemFont(ofSize: 32, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -31,7 +31,7 @@ class CarInfoCollectionViewCell: CustomCollectionViewCell {
     private lazy var motorLabel: UILabel = {
         let label: UILabel = .init()
         label.textColor = Colors.black
-        label.text = "motor label"
+        label.text = "Long Range Dual Motor"
         label.font = UIFont.systemFont(ofSize: 12, weight: .regular)
         label.numberOfLines = 0
         label.text = label.text?.capitalized
@@ -96,19 +96,19 @@ class CarInfoCollectionViewCell: CustomCollectionViewCell {
         contentView.addSubview(seperatorLabel)
         NSLayoutConstraint.activate([
             seperatorLabel.centerYAnchor.constraint(equalTo: motorLabel.centerYAnchor),
-            seperatorLabel.leadingAnchor.constraint(equalTo: motorLabel.trailingAnchor, constant: 10)
+            seperatorLabel.leadingAnchor.constraint(equalTo: motorLabel.trailingAnchor, constant: 5)
         ])
         
         contentView.addSubview(batterySizePrimaryLabel)
         NSLayoutConstraint.activate([
             batterySizePrimaryLabel.bottomAnchor.constraint(equalTo: motorLabel.bottomAnchor),
-            batterySizePrimaryLabel.leadingAnchor.constraint(equalTo: seperatorLabel.trailingAnchor, constant: 10)
+            batterySizePrimaryLabel.leadingAnchor.constraint(equalTo: seperatorLabel.trailingAnchor, constant: 5)
         ])
         
         contentView.addSubview(batterySizeSecondaryLabel)
         NSLayoutConstraint.activate([
             batterySizeSecondaryLabel.topAnchor.constraint(equalTo: motorLabel.topAnchor),
-            batterySizeSecondaryLabel.leadingAnchor.constraint(equalTo: batterySizePrimaryLabel.trailingAnchor, constant: 10)
+            batterySizeSecondaryLabel.leadingAnchor.constraint(equalTo: batterySizePrimaryLabel.trailingAnchor, constant: 5)
         ])
         
         contentView.addSubview(carImageView)
