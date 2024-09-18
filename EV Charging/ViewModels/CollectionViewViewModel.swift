@@ -21,7 +21,8 @@ class CollectionViewViewModel {
     private(set) var chargingTimeSeconds: Int = 0
     
     init() {
-        
+        calculateChargingCost()
+        calculateChargingTime()
     }
     
     var carName: String {

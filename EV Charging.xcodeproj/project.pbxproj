@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF1929B62C938AA600B8E681 /* CarListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1929B52C938AA600B8E681 /* CarListViewController.swift */; };
 		BF46B4322C8DAB6C005860B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46B4312C8DAB6C005860B2 /* AppDelegate.swift */; };
 		BF46B4342C8DAB6C005860B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46B4332C8DAB6C005860B2 /* SceneDelegate.swift */; };
 		BF46B4362C8DAB6C005860B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46B4352C8DAB6C005860B2 /* ViewController.swift */; };
@@ -30,6 +31,7 @@
 		BF46B4822C8E4B8C005860B2 /* Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46B47B2C8E4B8B005860B2 /* Slider.swift */; };
 		BF46B4832C8E4B8C005860B2 /* Slidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46B47C2C8E4B8B005860B2 /* Slidable.swift */; };
 		BF46B4852C8EE87D005860B2 /* ChargingPowerAndCostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46B4842C8EE87D005860B2 /* ChargingPowerAndCostCollectionViewCell.swift */; };
+		BFACFEAA2C94862B006DD222 /* TimeAndCostInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFACFEA92C94862B006DD222 /* TimeAndCostInfoView.swift */; };
 		BFE75B6B2C903A9700F329A1 /* CollectionViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE75B6A2C903A9700F329A1 /* CollectionViewViewModel.swift */; };
 		BFE75B6D2C907F1800F329A1 /* CostAndTimerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE75B6C2C907F1800F329A1 /* CostAndTimerCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -52,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF1929B52C938AA600B8E681 /* CarListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewController.swift; sourceTree = "<group>"; };
 		BF46B42E2C8DAB6C005860B2 /* EV Charging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EV Charging.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF46B4312C8DAB6C005860B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF46B4332C8DAB6C005860B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +83,7 @@
 		BF46B47B2C8E4B8B005860B2 /* Slider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slider.swift; sourceTree = "<group>"; };
 		BF46B47C2C8E4B8B005860B2 /* Slidable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slidable.swift; sourceTree = "<group>"; };
 		BF46B4842C8EE87D005860B2 /* ChargingPowerAndCostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingPowerAndCostCollectionViewCell.swift; sourceTree = "<group>"; };
+		BFACFEA92C94862B006DD222 /* TimeAndCostInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAndCostInfoView.swift; sourceTree = "<group>"; };
 		BFE75B6A2C903A9700F329A1 /* CollectionViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewViewModel.swift; sourceTree = "<group>"; };
 		BFE75B6C2C907F1800F329A1 /* CostAndTimerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostAndTimerCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -144,6 +148,7 @@
 				BF46B4422C8DAB6E005860B2 /* EV_Charging.entitlements */,
 				BF46B4432C8DAB6E005860B2 /* Info.plist */,
 				BF46B43A2C8DAB6C005860B2 /* EV_Charging.xcdatamodeld */,
+				BF1929B52C938AA600B8E681 /* CarListViewController.swift */,
 			);
 			path = "EV Charging";
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 		BF46B46B2C8DE18B005860B2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BFACFEA82C9484C2006DD222 /* UIViews */,
 				BF46B4752C8E4B64005860B2 /* UISlider */,
 				BF46B46C2C8DE197005860B2 /* CollectionViewCells */,
 			);
@@ -215,6 +221,14 @@
 				BF46B4772C8E4B8A005860B2 /* UIKitSlider.swift */,
 			);
 			path = UISlider;
+			sourceTree = "<group>";
+		};
+		BFACFEA82C9484C2006DD222 /* UIViews */ = {
+			isa = PBXGroup;
+			children = (
+				BFACFEA92C94862B006DD222 /* TimeAndCostInfoView.swift */,
+			);
+			path = UIViews;
 			sourceTree = "<group>";
 		};
 		BFE75B692C903A7800F329A1 /* ViewModels */ = {
@@ -365,6 +379,7 @@
 				BF46B4832C8E4B8C005860B2 /* Slidable.swift in Sources */,
 				BF46B4812C8E4B8C005860B2 /* Slider+Options.swift in Sources */,
 				BF46B4852C8EE87D005860B2 /* ChargingPowerAndCostCollectionViewCell.swift in Sources */,
+				BF1929B62C938AA600B8E681 /* CarListViewController.swift in Sources */,
 				BF46B46A2C8DE155005860B2 /* ReuseIdentifying.swift in Sources */,
 				BF46B46E2C8DE1C8005860B2 /* CarInfoCollectionViewCell.swift in Sources */,
 				BF46B47F2C8E4B8C005860B2 /* ThumblessSlider+Scaling.swift in Sources */,
@@ -374,6 +389,7 @@
 				BF46B4802C8E4B8C005860B2 /* Slider+ViewModel.swift in Sources */,
 				BF46B4322C8DAB6C005860B2 /* AppDelegate.swift in Sources */,
 				BF46B4342C8DAB6C005860B2 /* SceneDelegate.swift in Sources */,
+				BFACFEAA2C94862B006DD222 /* TimeAndCostInfoView.swift in Sources */,
 				BFE75B6D2C907F1800F329A1 /* CostAndTimerCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

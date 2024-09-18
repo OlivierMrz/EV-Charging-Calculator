@@ -88,7 +88,7 @@ class CostAndTimerCollectionViewCell: OMCustomCollectionView {
     private lazy var minuteTimerLabel: UILabel = {
         let label: UILabel = .init()
         label.textColor = Colors.black
-        label.text = "01"
+        label.text = "00"
         label.font = UIFont.systemFont(ofSize: 32, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label

@@ -28,18 +28,26 @@ class ViewController: UIViewController {
         return cv
     }()
     
+    private lazy var infoView: TimeAndCostInfoView = {
+        let view: TimeAndCostInfoView = .init()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     private var collectionViewViewModel: CollectionViewViewModel?
     
     override func loadView() {
         super.loadView()
         
         view.addSubview(collectionView)
+        view.addSubview(infoView)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.collectionViewViewModel = CollectionViewViewModel()
+        self.infoView.configure(viewModel: self.collectionViewViewModel)
         setupUI()
     }
 
@@ -55,10 +63,17 @@ class ViewController: UIViewController {
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor)
         ])
+        
+        NSLayoutConstraint.activate([
+            infoView.heightAnchor.constraint(equalToConstant: 110),
+            infoView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            infoView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            infoView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
     }
 }
 
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         4
     }
@@ -101,11 +116,27 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // to be implemanted
         if indexPath.row == 0 {
-            let vc = UIViewController()
-            vc.view.backgroundColor = .white
-            vc.modalPresentationStyle = .formSheet
-            self.present(vc, animated: true, completion: nil)
+            let vc = CarListViewController()
+            let navc = UINavigationController(rootViewController: vc)
+            navc.modalPresentationStyle = .formSheet
+            self.present(navc, animated: true, completion: nil)
         }
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        guard let cell = collectionView.cellForItem(at: IndexPath(row: 3, section: 0)) else { return }
+        
+        let safeareas = view.bounds.size.height - collectionView.frame.height
+        let cellLocation = cell.frame.minY - (cell.bounds.size.height + infoView.bounds.size.height) - safeareas
+        
+        if (scrollView.contentOffset.y < cellLocation - 95) {
+            infoView.isHidden = false
+        }
+
+        if (scrollView.contentOffset.y >= cellLocation - 95) {
+            infoView.isHidden = true
+        }
+
     }
 }
 
@@ -113,6 +144,8 @@ extension ViewController: sliderMovementDelegate {
     func isSliderMoving(bool: Bool) {
         collectionView.isScrollEnabled = bool
         collectionView.reloadData()
+        
+        infoView.updateData()
     }
 }
 
@@ -120,6 +153,7 @@ extension ViewController: ChargingPowerAndCostCellDelegate {
     func additionalViewTapped(isNoFeeSelected: Bool) {
         if isNoFeeSelected {
             collectionView.reloadData()
+            infoView.updateData()
         } else {
             promptForAnswer()
         }
@@ -127,6 +161,7 @@ extension ViewController: ChargingPowerAndCostCellDelegate {
     
     func ChargingKWOrChargingCostSliderMoved() {
         collectionView.reloadData()
+        infoView.updateData()
     }
 
     private func promptForAnswer() {
@@ -143,6 +178,7 @@ extension ViewController: ChargingPowerAndCostCellDelegate {
 
             self.collectionViewViewModel?.setAdditionalCost(value: newValue)
             self.collectionView.reloadData()
+            self.infoView.updateData()
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in }
